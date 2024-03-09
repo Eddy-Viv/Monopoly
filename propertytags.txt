@@ -1,0 +1,28 @@
+Old Kent Road            : KEN
+Whitechapel Road         : WHR
+the Angel, Islington     : ANG
+Euston Road              : EUS
+Pentonville Road         : PEN
+Pall Mall                : PAL
+Whitehall                : WHH
+Northumberland Avenue    : NOR
+Bow Street               : BOW
+Marlborough Street       : MAR
+Vine Street              : VIN
+the Strand               : STR
+Fleet Street             : FLE
+Trafalgar Square         : TRA
+Leicester Square         : LEI
+Coventry Street          : COV
+Picadilly                : PIC
+Regent Stret             : REG
+Oxford Street            : OXF
+Bond Street              : BON
+Park Lane                : PAR
+Mayfair                  : MAY
+King's Cross Station     : KIS
+Marleybone Station       : MAS
+Fenchurch Street Station : FES
+Liverpool Street Station : LIS
+Electric Company         : ELU
+Water Works              : WAU

@@ -13,5 +13,15 @@ namespace Monopoly
     /// </summary>
     public partial class App : Application
     {
+
+        App() { 
+            
+        }
+
+
+        private void ApplicationStartup(object sender, StartupEventArgs e) { 
+            MainWindow wnd = new MainWindow();
+            wnd.Show();
+        }
     }
 }
