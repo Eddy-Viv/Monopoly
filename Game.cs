@@ -9,14 +9,16 @@ namespace Monopoly
 {
     class Game
     {
-        Board board;
-
         List <Player> players = new List<Player>();
         int noplayers;
+
+        Board board;
 
         PropertyList properties;
 
         Dice dice;
+
+        int turn;
 
         public Game(int nnoplayers) { 
             if (nnoplayers >= 2)
@@ -27,8 +29,13 @@ namespace Monopoly
                     players.Add(new AIPlayer());
                 }
 
-                board = new Board(4);
+                board = new Board(noplayers);
 
+                properties = new PropertyList();
+
+                dice = new Dice();
+
+                turn = -1;
 
             }
         }

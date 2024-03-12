@@ -404,10 +404,54 @@
                         <Border Grid.Row="10" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
                             <Grid Background="White">
                                 <Viewbox Margin="5">
-                                    <TextBlock  TextAlignment="Center" FontWeight="Bold" > GO</TextBlock>
+                                    <TextBlock TextAlignment="Center" FontWeight="Bold" > GO</TextBlock>
                                 </Viewbox>
                             </Grid>
                         </Border>
+
+                        <Grid Grid.Row="1" Grid.RowSpan="3" Grid.Column="4" Grid.ColumnSpan="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="7*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="1" BorderBrush="White" BorderThickness="4" Background="DarkOrange" Margin="10">
+                                <Viewbox  Stretch="Uniform">
+                                    <TextBlock TextAlignment="Center" FontWeight="Bold"> ? </TextBlock>
+                                </Viewbox>
+                            </Border>
+                            <Viewbox Grid.Row="2" Stretch="Uniform">
+                                <TextBlock TextAlignment="Center" Foreground="White"> Chance</TextBlock>
+                            </Viewbox>
+                        </Grid>
+                        
+                        <Grid Grid.Row="4" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="9">
+                            <Viewbox Margin="20" Stretch="Fill">
+                                <Grid>
+                                    <TextBlock Background="Red" Foreground="Black" FontWeight="Bold" Margin="0,1,0,0" > MONOPOLY</TextBlock>
+                                    <TextBlock Foreground="White" FontWeight="Bold" Margin="1,0,0,1" > MONOPOLY</TextBlock>
+                                </Grid>
+                            </Viewbox>
+
+                        </Grid>
+
+                        <Grid Grid.Row="7" Grid.RowSpan="3" Grid.Column="4" Grid.ColumnSpan="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="7*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="1" BorderBrush="White" BorderThickness="4" Background="DeepSkyBlue" Margin="10">
+                                <Viewbox  Stretch="Uniform">
+                                    <TextBlock TextAlignment="Center" FontWeight="Bold"> ??</TextBlock>
+                                </Viewbox>
+                            </Border>
+                            <Viewbox Grid.Row="2" Stretch="Uniform">
+                                <TextBlock TextAlignment="Center" Foreground="White"> Community Chest</TextBlock>
+                            </Viewbox>
+                        </Grid>
 
                     </Grid>
                 </Border>

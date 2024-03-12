@@ -14,8 +14,10 @@ namespace Monopoly
     public partial class App : Application
     {
 
+        Game game;
+
         App() { 
-            
+            game = new Game(4);
         }
 
 
