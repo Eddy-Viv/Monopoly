@@ -20,7 +20,7 @@
                 <!-- placeholder -->
                 <TextBox></TextBox>
             </Grid>
-            <Viewbox Stretch="Uniform" Margin="10" HorizontalAlignment="Left" >
+            <Viewbox Stretch="Uniform" Margin="10" DockPanel.Dock="Left" >
                 <Border Height="1000" Width="1000" BorderThickness="2" BorderBrush="Black" Background="Black">
                     <Grid Name="pnlMainGrid" MouseUp="pnlMainGrid_MouseUp" >
 
@@ -456,6 +456,39 @@
                     </Grid>
                 </Border>
             </Viewbox>
+            <Viewbox DockPanel.Dock="Top" Stretch="Uniform" Margin="10" MouseUp="Dice_Click">
+                <Border Height="1000" Width="2000">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Margin="10" Background="White" BorderBrush="Black" BorderThickness="10" CornerRadius="100" >
+                            <Canvas >
+                                <Ellipse Name="Dot_1_1" Canvas.Top="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_1_2" Canvas.Top="400" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_1_3" Canvas.Bottom="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_1_4" Canvas.Top="400" Canvas.Left="400" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_1_5" Canvas.Top="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_1_6" Canvas.Top="400" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_1_7" Canvas.Bottom="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                            </Canvas>
+                        </Border>
+                        <Border Grid.Column="1" Margin="10" Background="White" BorderBrush="Black" BorderThickness="10" CornerRadius="100" >
+                            <Canvas >
+                                <Ellipse Name="Dot_2_1" Canvas.Top="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_2_2" Canvas.Top="400" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_2_3" Canvas.Bottom="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_2_4" Canvas.Top="400" Canvas.Left="400" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_2_5" Canvas.Top="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_2_6" Canvas.Top="400" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                                <Ellipse Name="Dot_2_7" Canvas.Bottom="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                            </Canvas>
+                        </Border>
+                    </Grid>
+                </Border>
+            </Viewbox>
+            <Grid></Grid>
         </DockPanel>
     </DockPanel>
 </Window>

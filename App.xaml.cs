@@ -25,5 +25,13 @@ namespace Monopoly
             MainWindow wnd = new MainWindow();
             wnd.Show();
         }
+
+        public void rollDice() { 
+            game.rollDice();
+        }
+
+        public int getDice(int diceno) { 
+            return game.getDice(diceno);
+        }
     }
 }

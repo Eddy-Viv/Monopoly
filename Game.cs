@@ -39,5 +39,13 @@ namespace Monopoly
 
             }
         }
+
+        public void rollDice() { 
+            dice.roll();
+        }
+
+        public int getDice(int diceno) { 
+            return dice.read(diceno);
+        }
     }
 }
