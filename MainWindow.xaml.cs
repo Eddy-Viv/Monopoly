@@ -30,10 +30,7 @@ namespace Monopoly
             updateDice();
         }
 
-        private void pnlMainGrid_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("You clicked me at " + e.GetPosition(this).ToString());
-        }
+
 
         void Dice_Click(object sender, MouseButtonEventArgs e)
         {
@@ -60,6 +57,141 @@ namespace Monopoly
                 }
             }
         }
+
+        private void KEN_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.KEN());
+        }
+
+        private void WHR_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.WHR());
+        }
+
+        private void ANG_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.ANG());
+        }
+
+        private void EUS_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.EUS());
+        }
+
+        private void PEN_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.PEN());
+        }
+
+        private void PAL_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.PAL());
+        }
+
+        private void WHH_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.WHH());
+        }
+
+        private void NOR_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.NOR());
+        }
+
+        private void BOW_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.BOW());
+        }
+
+        private void MAR_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.MAR());
+        }
+
+        private void VIN_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.VIN());
+        }
+
+        private void STR_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.STR());
+        }
+
+        private void FLE_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.FLE());
+        }
+
+        private void TRA_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.TRA());
+        }
+
+        private void LEI_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.LEI());
+        }
+
+        private void COV_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.COV());
+        }
+
+        private void PIC_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.PIC());
+        }
+
+        private void REG_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.REG());
+        }
+
+        private void OXF_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.OXF());
+        }
+
+        private void BON_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.BON());
+        }
+
+        private void PAR_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.PAR());
+        }
+
+        private void MAY_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.MAY());
+        }
+
+
+
     }
 
     public class DiceDisplay { 

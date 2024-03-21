@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Monopoly"
+        xmlns:uc="clr-namespace:UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="1000" Width="1800">
     <DockPanel Background="DarkGray">
@@ -16,13 +17,9 @@
             <TextBox></TextBox>
         </Grid>
         <DockPanel>
-            <Grid DockPanel.Dock="Right">
-                <!-- placeholder -->
-                <TextBox></TextBox>
-            </Grid>
             <Viewbox Stretch="Uniform" Margin="10" DockPanel.Dock="Left" >
                 <Border Height="1000" Width="1000" BorderThickness="2" BorderBrush="Black" Background="Black">
-                    <Grid Name="pnlMainGrid" MouseUp="pnlMainGrid_MouseUp" >
+                    <Grid Name="pnlMainGrid" >
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="3*" />
@@ -60,7 +57,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Column="1" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Column="1" BorderBrush="Black" BorderThickness="2" MouseEnter="STR_Mouseover">
                             <Grid  Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
@@ -76,7 +73,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Column="3" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Column="3" BorderBrush="Black" BorderThickness="2" MouseEnter="FLE_Mouseover">
                             <Grid  Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
@@ -86,7 +83,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Column="4" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Column="4" BorderBrush="Black" BorderThickness="2" MouseEnter="TRA_Mouseover">
                             <Grid  Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
@@ -102,7 +99,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Column="6" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Column="6" BorderBrush="Black" BorderThickness="2" MouseEnter="LEI_Mouseover">
                             <Grid  Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
@@ -112,7 +109,7 @@
                             </Grid>
                         </Border>
 
-                        <Border  Grid.Column="7" BorderBrush="Black" BorderThickness="2">
+                        <Border  Grid.Column="7" BorderBrush="Black" BorderThickness="2" MouseEnter="COV_Mouseover">
                             <Grid  Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
@@ -128,7 +125,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Column="9" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Column="9" BorderBrush="Black" BorderThickness="2" MouseEnter="PIC_Mouseover">
                             <Grid  Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
@@ -146,7 +143,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2" MouseEnter="VIN_Mouseover">
                             <Grid  Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
@@ -156,7 +153,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="1" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="1" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="REG_Mouseover">
                             <Grid   Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
@@ -166,7 +163,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="2" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="2" BorderBrush="Black" BorderThickness="2" MouseEnter="MAR_Mouseover">
                             <Grid  Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
@@ -176,7 +173,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="2" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="2" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="OXF_Mouseover">
                             <Grid   Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
@@ -198,7 +195,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="4" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="4" BorderBrush="Black" BorderThickness="2" MouseEnter="BOW_Mouseover">
                             <Grid  Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
@@ -208,7 +205,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="4" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="4" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="BON_Mouseover">
                             <Grid  Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
@@ -230,7 +227,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="6" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="6" BorderBrush="Black" BorderThickness="2" MouseEnter="NOR_Mouseover">
                             <Grid Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
@@ -246,7 +243,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="7" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="7" BorderBrush="Black" BorderThickness="2" MouseEnter="WHH_Mouseover">
                             <Grid Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
@@ -256,7 +253,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="7" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="7" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="PAR_Mouseover">
                             <Grid Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
@@ -278,7 +275,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="9" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="9" BorderBrush="Black" BorderThickness="2" MouseEnter="PAL_Mouseover">
                             <Grid Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
@@ -288,7 +285,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="9" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="9" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="MAY_Mouseover">
                             <Grid Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
@@ -327,7 +324,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="10" Grid.Column="1" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="10" Grid.Column="1" BorderBrush="Black" BorderThickness="2" MouseEnter="PEN_Mouseover">
                             <Grid Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
@@ -337,7 +334,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="10" Grid.Column="2" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="10" Grid.Column="2" BorderBrush="Black" BorderThickness="2" MouseEnter="EUS_Mouseover">
                             <Grid Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
@@ -353,7 +350,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="10" Grid.Column="4" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="10" Grid.Column="4" BorderBrush="Black" BorderThickness="2" MouseEnter="ANG_Mouseover">
                             <Grid Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
@@ -375,7 +372,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="10" Grid.Column="7" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="10" Grid.Column="7" BorderBrush="Black" BorderThickness="2" MouseEnter="WHR_Mouseover">
                             <Grid Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
@@ -391,7 +388,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="10" Grid.Column="9" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="10" Grid.Column="9" BorderBrush="Black" BorderThickness="2" MouseEnter="KEN_Mouseover">
                             <Grid Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
@@ -456,38 +453,51 @@
                     </Grid>
                 </Border>
             </Viewbox>
-            <Viewbox DockPanel.Dock="Top" Stretch="Uniform" Margin="10" MouseUp="Dice_Click">
-                <Border Height="1000" Width="2000">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Border Margin="10" Background="White" BorderBrush="Black" BorderThickness="10" CornerRadius="100" >
-                            <Canvas >
-                                <Ellipse Name="Dot_1_1" Canvas.Top="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_1_2" Canvas.Top="400" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_1_3" Canvas.Bottom="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_1_4" Canvas.Top="400" Canvas.Left="400" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_1_5" Canvas.Top="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_1_6" Canvas.Top="400" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_1_7" Canvas.Bottom="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
-                            </Canvas>
-                        </Border>
-                        <Border Grid.Column="1" Margin="10" Background="White" BorderBrush="Black" BorderThickness="10" CornerRadius="100" >
-                            <Canvas >
-                                <Ellipse Name="Dot_2_1" Canvas.Top="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_2_2" Canvas.Top="400" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_2_3" Canvas.Bottom="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_2_4" Canvas.Top="400" Canvas.Left="400" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_2_5" Canvas.Top="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_2_6" Canvas.Top="400" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
-                                <Ellipse Name="Dot_2_7" Canvas.Bottom="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
-                            </Canvas>
-                        </Border>
+            
+            <Grid DockPanel.Dock="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <Viewbox DockPanel.Dock="Top" Stretch="Uniform" Margin="10" MouseUp="Dice_Click">
+                    <Border Height="1000" Width="2000">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Margin="10" Background="White" BorderBrush="Black" BorderThickness="10" CornerRadius="100" >
+                                <Canvas >
+                                    <Ellipse Name="Dot_1_1" Canvas.Top="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_1_2" Canvas.Top="400" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_1_3" Canvas.Bottom="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_1_4" Canvas.Top="400" Canvas.Left="400" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_1_5" Canvas.Top="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_1_6" Canvas.Top="400" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_1_7" Canvas.Bottom="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                                </Canvas>
+                            </Border>
+                            <Border Grid.Column="1" Margin="10" Background="White" BorderBrush="Black" BorderThickness="10" CornerRadius="100" >
+                                <Canvas >
+                                    <Ellipse Name="Dot_2_1" Canvas.Top="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_2_2" Canvas.Top="400" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_2_3" Canvas.Bottom="80" Canvas.Left="80" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_2_4" Canvas.Top="400" Canvas.Left="400" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_2_5" Canvas.Top="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_2_6" Canvas.Top="400" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                                    <Ellipse Name="Dot_2_7" Canvas.Bottom="80" Canvas.Right="80" Width="160" Height="160" Fill="Black" />
+                                </Canvas>
+                            </Border>
+                        </Grid>
+                    </Border>
+                </Viewbox>
+                <Viewbox Grid.Row="1" Stretch="Uniform" Margin="10">
+                    <Grid Height="4000" Width="3000" Name="PropertyCardView">
+                        <uc:KEN/>
                     </Grid>
-                </Border>
-            </Viewbox>
+                </Viewbox>
+            </Grid>
+            
             <Grid></Grid>
         </DockPanel>
     </DockPanel>

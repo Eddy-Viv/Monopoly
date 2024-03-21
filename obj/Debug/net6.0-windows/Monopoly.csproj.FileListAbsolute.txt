@@ -19,3 +19,6 @@ C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\refint\Monopoly.dll
 C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\Monopoly.pdb
 C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\Monopoly.genruntimeconfig.cache
 C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\ref\Monopoly.dll
+C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\PropertyCards.g.cs
+C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\PropertyCards.baml
