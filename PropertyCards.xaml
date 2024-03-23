@@ -8,16 +8,19 @@
              d:DesignHeight="4000" d:DesignWidth="3000">
     <Grid Background="White">
         <Border Background="White" BorderBrush="Black" BorderThickness="20" Margin="100">
-            <Grid>
+            <Grid Name="Titlegrid">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="3*" />
+                    <RowDefinition  Name="Imageratio"  Height="3*" />
                 </Grid.RowDefinitions>
                 <Border Name="Setcolour" BorderBrush="Black" BorderThickness="30" Margin="100" Background="Brown">
-                    <TextBlock Name="Propertytitle" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="250" FontWeight="Bold" >OLD KENT ROAD</TextBlock>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" >
+                        <TextBlock Name="Propertytitle" Foreground="White" FontSize="250" FontWeight="Bold" >OLD KENT ROAD</TextBlock>
+                        <TextBlock Name="Propertyprice" HorizontalAlignment="Center" Foreground="White" FontSize="120" FontWeight="Bold" >$60.</TextBlock>
+                    </StackPanel>
                 </Border>
                 <Grid Grid.Row="1">
-                    <Grid>
+                    <Grid Name="Rentlist">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -33,20 +36,22 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Name="Rent" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="220" Margin="0,50,0,100" FontWeight="DemiBold">RENT $2.</TextBlock>
+                        <Border Name="Rentborder" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,50,0,100">
+                            <TextBlock Name="Rent" FontSize="220" HorizontalAlignment="Center" FontWeight="DemiBold">RENT $2.</TextBlock>
+                        </Border>  
                             
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Left" FontSize="220" Margin="200,0,0,0" FontWeight="DemiBold">With 1 House</TextBlock>
+                        <TextBlock Name="With1house" Grid.Row="1" HorizontalAlignment="Left" FontSize="220" Margin="200,0,0,0" FontWeight="DemiBold">With 1 House</TextBlock>
                         <TextBlock Name="Rent1house" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" FontSize="220" Margin="0,0,200,0" FontWeight="DemiBold"> $30.</TextBlock>
-                        <TextBlock Grid.Row="2" HorizontalAlignment="Left" FontSize="220" Margin="200,0,0,0" FontWeight="DemiBold">With 2 Houses</TextBlock>
+                        <TextBlock Name="With2house" Grid.Row="2" HorizontalAlignment="Left" FontSize="220" Margin="200,0,0,0" FontWeight="DemiBold">With 2 Houses</TextBlock>
                         <TextBlock Name="Rent2house" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" FontSize="220" Margin="0,0,200,0" FontWeight="DemiBold"> $30.</TextBlock>
-                        <TextBlock Grid.Row="3" HorizontalAlignment="Left" FontSize="220" Margin="200,0,0,0" FontWeight="DemiBold">With 3 Houses</TextBlock>
+                        <TextBlock Name="With3house" Grid.Row="3" HorizontalAlignment="Left" FontSize="220" Margin="200,0,0,0" FontWeight="DemiBold">With 3 Houses</TextBlock>
                         <TextBlock Name="Rent3house" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" FontSize="220" Margin="0,0,200,0" FontWeight="DemiBold"> $30.</TextBlock>
-                        <TextBlock Grid.Row="4" HorizontalAlignment="Left" FontSize="220" Margin="200,0,0,0" FontWeight="DemiBold">With 4 Houses</TextBlock>
+                        <TextBlock Name="With4house" Grid.Row="4" HorizontalAlignment="Left" FontSize="220" Margin="200,0,0,0" FontWeight="DemiBold">With 4 Houses</TextBlock>
                         <TextBlock Name="Rent4house" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" FontSize="220" Margin="0,0,200,0" FontWeight="DemiBold"> $30.</TextBlock>
 
                         <TextBlock Name="Renthotel" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="220" Margin="0,100,0,0" FontWeight="DemiBold">With Hotel $250.</TextBlock>
-                        <TextBlock Name="Mortgage" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="220" Margin="0,0,0,0" FontWeight="DemiBold">Mortgage Value $30</TextBlock>
-                        <TextBlock Name="Buildcost" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="220" Margin="0,0,0,0" FontWeight="DemiBold">Buildings Cost $50</TextBlock>
+                        <TextBlock Name="Mortgage" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="220" Margin="0,0,0,0" FontWeight="DemiBold">Mortgage Value $30.</TextBlock>
+                        <TextBlock Name="Buildcost" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="220" Margin="0,0,0,0" FontWeight="DemiBold">Buildings Cost $50.</TextBlock>
                     </Grid>
                 </Grid>
             </Grid>

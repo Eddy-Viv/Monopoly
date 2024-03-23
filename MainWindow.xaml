@@ -69,7 +69,7 @@
 
                         <Border Grid.Column="2" BorderBrush="Black" BorderThickness="2">
                             <Grid  Background="White">
-
+                                <Image Source="/Monopoly;component/res/chance.jpg"/>
                             </Grid>
                         </Border>
 
@@ -93,9 +93,9 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Column="5" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Column="5" BorderBrush="Black" BorderThickness="2" MouseEnter="FES_Mouseover">
                             <Grid  Background="White">
-
+                                <Image Source="/Monopoly;component/res/train.png"/>
                             </Grid>
                         </Border>
 
@@ -119,9 +119,9 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Column="8" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Column="8" BorderBrush="Black" BorderThickness="2" MouseEnter="WAU_Mouseover">
                             <Grid  Background="White">
-
+                                <Image Source="/Monopoly;component/res/water.png"/>
                             </Grid>
                         </Border>
 
@@ -185,13 +185,13 @@
 
                         <Border Grid.Row="3" BorderBrush="Black" BorderThickness="2">
                             <Grid  Background="White">
-
+                                <Image Source="/Monopoly;component/res/chest.jpg"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="3" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
                             <Grid  Background="White">
-
+                                <Image Source="/Monopoly;component/res/chest.jpg"/>
                             </Grid>
                         </Border>
 
@@ -215,15 +215,15 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="5" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="5" BorderBrush="Black" BorderThickness="2" MouseEnter="MAS_Mouseover">
                             <Grid Background="White">
-
+                                <Image Source="/Monopoly;component/res/train.png"/>
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="5" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="5" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="LIS_Mouseover">
                             <Grid Background="White">
-
+                                <Image Source="/Monopoly;component/res/train.png"/>
                             </Grid>
                         </Border>
 
@@ -239,7 +239,7 @@
 
                         <Border Grid.Row="6" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
                             <Grid Background="White">
-
+                                <Image Source="/Monopoly;component/res/chance.jpg"/>
                             </Grid>
                         </Border>
 
@@ -263,15 +263,15 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="8" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="8" BorderBrush="Black" BorderThickness="2" MouseEnter="ELU_Mouseover">
                             <Grid Background="White">
-
+                                <Image Source="/Monopoly;component/res/electric.JPEG"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="8" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
                             <Grid Background="White">
-
+                                <Image Source="/Monopoly;component/res/super.png"/>
                             </Grid>
                         </Border>
 
@@ -346,7 +346,7 @@
 
                         <Border Grid.Row="10" Grid.Column="3" BorderBrush="Black" BorderThickness="2">
                             <Grid Background="White">
-
+                                <Image Source="/Monopoly;component/res/chance.jpg"/>
                             </Grid>
                         </Border>
 
@@ -360,15 +360,15 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="10" Grid.Column="5" BorderBrush="Black" BorderThickness="2">
+                        <Border Grid.Row="10" Grid.Column="5" BorderBrush="Black" BorderThickness="2" MouseEnter="KIS_Mouseover">
                             <Grid Background="White">
-
+                                <Image Source="/Monopoly;component/res/train.png"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="10" Grid.Column="6" BorderBrush="Black" BorderThickness="2">
                             <Grid Background="White">
-
+                                <Image Source="/Monopoly;component/res/tax.png"/>
                             </Grid>
                         </Border>
 
@@ -384,7 +384,7 @@
 
                         <Border Grid.Row="10" Grid.Column="8" BorderBrush="Black" BorderThickness="2">
                             <Grid Background="White">
-
+                                <Image Source="/Monopoly;component/res/chest.jpg"/>
                             </Grid>
                         </Border>
 
@@ -405,6 +405,8 @@
                                 </Viewbox>
                             </Grid>
                         </Border>
+                        
+                        
 
                         <Grid Grid.Row="1" Grid.RowSpan="3" Grid.Column="4" Grid.ColumnSpan="3">
                             <Grid.RowDefinitions>

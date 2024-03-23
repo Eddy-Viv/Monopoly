@@ -9,11 +9,45 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="res\chance.jpg" />
+    <None Remove="res\chest.jpg" />
+    <None Remove="res\electric.jpeg" />
+    <None Remove="res\super.png" />
+    <None Remove="res\tax.png" />
+    <None Remove="res\train.png" />
+    <None Remove="res\water.jpg" />
+    <None Remove="res\water.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="res\chance.jpg" />
+    <Resource Include="res\chest.jpg" />
+    <Resource Include="res\electric.jpeg" />
+    <Resource Include="res\super.png" />
+    <Resource Include="res\tax.png" />
+    <Resource Include="res\train.png" />
+    <Resource Include="res\water.jpg" />
+    <Resource Include="res\water.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

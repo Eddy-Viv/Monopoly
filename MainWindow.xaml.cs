@@ -190,7 +190,41 @@ namespace Monopoly
             PropertyCardView.Children.Add(new UserControls.MAY());
         }
 
+        private void KIS_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.KIS());
+        }
 
+        private void MAS_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.MAS());
+        }
+
+        private void FES_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.FES());
+        }
+
+        private void LIS_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.LIS());
+        }
+
+        private void WAU_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.WAU());
+        }
+
+        private void ELU_Mouseover(object sender, MouseEventArgs e)
+        {
+            PropertyCardView.Children.Clear();
+            PropertyCardView.Children.Add(new UserControls.ELU());
+        }
 
     }
 
