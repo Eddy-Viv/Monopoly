@@ -24,5 +24,5 @@ C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\GeneratedInternalTy
 C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\PropertyCards.baml
 C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\Monopoly.Properties.Resources.resources
 C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\Monopoly.csproj.GenerateResource.cache
-C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\t.g.cs
-C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\t.baml
+C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\playertokens.g.cs
+C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\playertokens.baml

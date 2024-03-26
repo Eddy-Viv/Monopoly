@@ -50,7 +50,7 @@
                         </Grid.ColumnDefinitions>
 
                         <Border BorderBrush="Black" BorderThickness="2">
-                            <Grid Background="White">
+                            <Grid Name="Tile20" Background="White">
                                 <Viewbox Margin="5">
                                     <TextBlock  TextAlignment="Center" FontWeight="Bold" > Free <LineBreak/> Parking</TextBlock>
                                 </Viewbox>
@@ -58,7 +58,7 @@
                         </Border>
 
                         <Border Grid.Column="1" BorderBrush="Black" BorderThickness="2" MouseEnter="STR_Mouseover">
-                            <Grid  Background="White">
+                            <Grid Name="Tile21" Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
                                     <RowDefinition Height="*" />
@@ -68,13 +68,13 @@
                         </Border>
 
                         <Border Grid.Column="2" BorderBrush="Black" BorderThickness="2">
-                            <Grid  Background="White">
+                            <Grid Name="Tile22" Background="White">
                                 <Image Source="/Monopoly;component/res/chance.jpg"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Column="3" BorderBrush="Black" BorderThickness="2" MouseEnter="FLE_Mouseover">
-                            <Grid  Background="White">
+                            <Grid Name="Tile23" Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
                                     <RowDefinition Height="*" />
@@ -84,7 +84,7 @@
                         </Border>
 
                         <Border Grid.Column="4" BorderBrush="Black" BorderThickness="2" MouseEnter="TRA_Mouseover">
-                            <Grid  Background="White">
+                            <Grid Name="Tile24" Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
                                     <RowDefinition Height="*" />
@@ -94,13 +94,13 @@
                         </Border>
 
                         <Border Grid.Column="5" BorderBrush="Black" BorderThickness="2" MouseEnter="FES_Mouseover">
-                            <Grid  Background="White">
+                            <Grid  Name="Tile25" Background="White">
                                 <Image Source="/Monopoly;component/res/train.png"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Column="6" BorderBrush="Black" BorderThickness="2" MouseEnter="LEI_Mouseover">
-                            <Grid  Background="White">
+                            <Grid  Name="Tile26" Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
                                     <RowDefinition Height="*" />
@@ -110,7 +110,7 @@
                         </Border>
 
                         <Border  Grid.Column="7" BorderBrush="Black" BorderThickness="2" MouseEnter="COV_Mouseover">
-                            <Grid  Background="White">
+                            <Grid  Name="Tile27" Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
                                     <RowDefinition Height="*" />
@@ -120,13 +120,13 @@
                         </Border>
 
                         <Border Grid.Column="8" BorderBrush="Black" BorderThickness="2" MouseEnter="WAU_Mouseover">
-                            <Grid  Background="White">
+                            <Grid  Name="Tile28" Background="White">
                                 <Image Source="/Monopoly;component/res/water.png"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Column="9" BorderBrush="Black" BorderThickness="2" MouseEnter="PIC_Mouseover">
-                            <Grid  Background="White">
+                            <Grid Name="Tile29" Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="3*" />
                                     <RowDefinition Height="*" />
@@ -136,7 +136,7 @@
                         </Border>
 
                         <Border  Grid.Column="10" BorderBrush="Black" BorderThickness="2">
-                            <Grid  Background="White">
+                            <Grid Name="Tile30" Background="White">
                                 <Viewbox Margin="5">
                                     <TextBlock  TextAlignment="Center" FontWeight="Bold" > Go To <LineBreak/> Jail</TextBlock>
                                 </Viewbox>
@@ -144,7 +144,7 @@
                         </Border>
 
                         <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2" MouseEnter="VIN_Mouseover">
-                            <Grid  Background="White">
+                            <Grid  Name="Tile19" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
                                     <ColumnDefinition Width="*" />
@@ -154,7 +154,7 @@
                         </Border>
 
                         <Border Grid.Row="1" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="REG_Mouseover">
-                            <Grid   Background="White">
+                            <Grid   Name="Tile31" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="3*" />
@@ -164,7 +164,7 @@
                         </Border>
 
                         <Border Grid.Row="2" BorderBrush="Black" BorderThickness="2" MouseEnter="MAR_Mouseover">
-                            <Grid  Background="White">
+                            <Grid  Name="Tile18" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
                                     <ColumnDefinition Width="*" />
@@ -174,7 +174,7 @@
                         </Border>
 
                         <Border Grid.Row="2" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="OXF_Mouseover">
-                            <Grid   Background="White">
+                            <Grid   Name="Tile32" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="3*" />
@@ -184,19 +184,19 @@
                         </Border>
 
                         <Border Grid.Row="3" BorderBrush="Black" BorderThickness="2">
-                            <Grid  Background="White">
+                            <Grid  Name="Tile17" Background="White">
                                 <Image Source="/Monopoly;component/res/chest.jpg"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="3" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
-                            <Grid  Background="White">
+                            <Grid  Name="Tile33" Background="White">
                                 <Image Source="/Monopoly;component/res/chest.jpg"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="4" BorderBrush="Black" BorderThickness="2" MouseEnter="BOW_Mouseover">
-                            <Grid  Background="White">
+                            <Grid  Name="Tile16" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
                                     <ColumnDefinition Width="*" />
@@ -206,7 +206,7 @@
                         </Border>
 
                         <Border Grid.Row="4" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="BON_Mouseover">
-                            <Grid  Background="White">
+                            <Grid  Name="Tile34" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="3*" />
@@ -216,19 +216,19 @@
                         </Border>
 
                         <Border Grid.Row="5" BorderBrush="Black" BorderThickness="2" MouseEnter="MAS_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile15" Background="White">
                                 <Image Source="/Monopoly;component/res/train.png"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="5" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="LIS_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile35" Background="White">
                                 <Image Source="/Monopoly;component/res/train.png"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="6" BorderBrush="Black" BorderThickness="2" MouseEnter="NOR_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile14" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
                                     <ColumnDefinition Width="*" />
@@ -238,13 +238,13 @@
                         </Border>
 
                         <Border Grid.Row="6" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
-                            <Grid Background="White">
+                            <Grid Name="Tile36" Background="White">
                                 <Image Source="/Monopoly;component/res/chance.jpg"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="7" BorderBrush="Black" BorderThickness="2" MouseEnter="WHH_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile13" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
                                     <ColumnDefinition Width="*" />
@@ -254,7 +254,7 @@
                         </Border>
 
                         <Border Grid.Row="7" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="PAR_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile37" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="3*" />
@@ -264,19 +264,19 @@
                         </Border>
 
                         <Border Grid.Row="8" BorderBrush="Black" BorderThickness="2" MouseEnter="ELU_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile12" Background="White">
                                 <Image Source="/Monopoly;component/res/electric.JPEG"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="8" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
-                            <Grid Background="White">
+                            <Grid Name="Tile38" Background="White">
                                 <Image Source="/Monopoly;component/res/super.png"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="9" BorderBrush="Black" BorderThickness="2" MouseEnter="PAL_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile11" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*" />
                                     <ColumnDefinition Width="*" />
@@ -286,7 +286,7 @@
                         </Border>
 
                         <Border Grid.Row="9" Grid.Column="10" BorderBrush="Black" BorderThickness="2" MouseEnter="MAY_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile39" Background="White">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="3*" />
@@ -296,7 +296,7 @@
                         </Border>
 
                         <Border Grid.Row="10" BorderBrush="Black" BorderThickness="2">
-                            <Grid Background="White">
+                            <Grid  Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="2*" />
                                     <RowDefinition Height="*" />
@@ -308,14 +308,14 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Border Grid.Column="1" BorderBrush="Black" BorderThickness="4,0,0,4">
-                                    <Grid Background="Orange">
+                                    <Grid Name="Tile40" Background="Orange">
                                         <Viewbox Margin="5">
                                             <TextBlock TextAlignment="Center" FontWeight="Bold" > In <LineBreak/> Jail</TextBlock>
                                         </Viewbox>
                                     </Grid>
                                 </Border>
 
-                                <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                                <Grid Name="Tile10" Grid.Row="1" Grid.ColumnSpan="2">
                                     <Viewbox Margin="5">
                                         <TextBlock TextAlignment="Center" FontWeight="Bold" > Visiting</TextBlock>
                                     </Viewbox>
@@ -325,7 +325,7 @@
                         </Border>
 
                         <Border Grid.Row="10" Grid.Column="1" BorderBrush="Black" BorderThickness="2" MouseEnter="PEN_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile9" Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="3*" />
@@ -335,7 +335,7 @@
                         </Border>
 
                         <Border Grid.Row="10" Grid.Column="2" BorderBrush="Black" BorderThickness="2" MouseEnter="EUS_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile8" Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="3*" />
@@ -345,13 +345,13 @@
                         </Border>
 
                         <Border Grid.Row="10" Grid.Column="3" BorderBrush="Black" BorderThickness="2">
-                            <Grid Background="White">
+                            <Grid Name="Tile7" Background="White">
                                 <Image Source="/Monopoly;component/res/chance.jpg"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="10" Grid.Column="4" BorderBrush="Black" BorderThickness="2" MouseEnter="ANG_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile6" Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="3*" />
@@ -361,19 +361,19 @@
                         </Border>
 
                         <Border Grid.Row="10" Grid.Column="5" BorderBrush="Black" BorderThickness="2" MouseEnter="KIS_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile5" Background="White">
                                 <Image Source="/Monopoly;component/res/train.png"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="10" Grid.Column="6" BorderBrush="Black" BorderThickness="2">
-                            <Grid Background="White">
+                            <Grid Name="Tile4" Background="White">
                                 <Image Source="/Monopoly;component/res/tax.png"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="10" Grid.Column="7" BorderBrush="Black" BorderThickness="2" MouseEnter="WHR_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile3" Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="3*" />
@@ -383,13 +383,13 @@
                         </Border>
 
                         <Border Grid.Row="10" Grid.Column="8" BorderBrush="Black" BorderThickness="2">
-                            <Grid Background="White">
+                            <Grid Name="Tile2" Background="White">
                                 <Image Source="/Monopoly;component/res/chest.jpg"/>
                             </Grid>
                         </Border>
 
                         <Border Grid.Row="10" Grid.Column="9" BorderBrush="Black" BorderThickness="2" MouseEnter="KEN_Mouseover">
-                            <Grid Background="White">
+                            <Grid Name="Tile1" Background="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="3*" />
@@ -399,7 +399,7 @@
                         </Border>
 
                         <Border Grid.Row="10" Grid.Column="10" BorderBrush="Black" BorderThickness="2">
-                            <Grid Background="White">
+                            <Grid Name="Tile0" Background="White">
                                 <Viewbox Margin="5">
                                     <TextBlock TextAlignment="Center" FontWeight="Bold" > GO</TextBlock>
                                 </Viewbox>

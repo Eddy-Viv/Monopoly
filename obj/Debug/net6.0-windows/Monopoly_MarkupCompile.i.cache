@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\ed\Desktop\Csharp\Monopoly\App.xaml
-3-961321784
+3-544324822
 
-151200355204
+15370719079
 1941709816142
-MainWindow.xaml;PropertyCards.xaml;t.xaml;
+MainWindow.xaml;playertokens.xaml;PropertyCards.xaml;
 
 True
 

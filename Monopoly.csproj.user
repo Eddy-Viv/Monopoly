@@ -10,7 +10,7 @@
     <Compile Update="PropertyCards.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="t.xaml.cs">
+    <Compile Update="playertokens.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -21,7 +21,7 @@
     <Page Update="PropertyCards.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="t.xaml">
+    <Page Update="playertokens.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

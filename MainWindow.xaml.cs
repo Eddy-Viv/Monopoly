@@ -22,10 +22,12 @@ namespace Monopoly
     {
 
         DiceDisplay dicedisplay;
+        Playerdisplay playerdisplay;
 
         public MainWindow()
         {
             dicedisplay = new DiceDisplay();
+            playerdisplay = new Playerdisplay(5);
             InitializeComponent();
             updateDice();
         }
@@ -38,6 +40,7 @@ namespace Monopoly
             dicedisplay.setDice(1, ((App)Application.Current).getDice(1));
             dicedisplay.setDice(2, ((App)Application.Current).getDice(2));
             updateDice();
+            refreshPlayerDisplay();
         }
 
         void updateDice() { 
@@ -226,6 +229,92 @@ namespace Monopoly
             PropertyCardView.Children.Add(new UserControls.ELU());
         }
 
+        public void refreshPlayerDisplay() {
+            string ttilename;
+
+            List <int> tplayersatthistile;
+
+            
+            
+
+            for (int i = 0; i < 41; i++)
+            {
+                tplayersatthistile = playerdisplay.getPlayersAtPosition(i);
+
+                ttilename = "Tile" + i.ToString();
+
+                for (int j = 0; j < ((Grid)FindName(ttilename)).Children.Count; j++) { 
+                    if (((Grid)FindName(ttilename)).Children[j].Uid == ttilename + "G") {
+                        ((Grid)FindName(ttilename)).Children.RemoveAt(j);
+                    }
+                }
+                
+               // if (FindName(ttilename + "G"). != null) { 
+                //        System.Diagnostics.Debug.WriteLine(FindName(ttilename + "G"));
+                 //   ((Grid)FindName(ttilename)).Children.Remove((Grid)FindName(ttilename + "G"));
+                    
+
+                //}
+
+
+                Grid tsubgrid = new Grid();
+                tsubgrid.Uid = ttilename + "G";
+                if (tplayersatthistile.Count() > 0) { 
+                    switch (tplayersatthistile.Count()) { 
+                        case 0:
+                            break;
+                        case 1:
+                            RowDefinition trow = new RowDefinition();
+                            trow.Height = new GridLength(1, GridUnitType.Star);
+                            tsubgrid.RowDefinitions.Add(trow);
+                            ColumnDefinition tcol = new ColumnDefinition();
+                            tcol.Width = new GridLength(1, GridUnitType.Star);
+                            tsubgrid.ColumnDefinitions.Add(tcol);
+                            break;
+                        case 2:
+                            ColumnDefinition ttcol = new ColumnDefinition();
+                            ttcol.Width = new GridLength(1, GridUnitType.Star);
+                            tsubgrid.ColumnDefinitions.Add(ttcol);
+                            goto case 1;
+                        case 3:
+                        case 4:
+                            RowDefinition ttrow = new RowDefinition();
+                            ttrow.Height = new GridLength(1, GridUnitType.Star);
+                            tsubgrid.RowDefinitions.Add(ttrow);
+                            goto case 2;
+                        case 5:
+                        case 6:
+                            ColumnDefinition tttcol = new ColumnDefinition();
+                            tttcol.Width = new GridLength(1, GridUnitType.Star);
+                            tsubgrid.ColumnDefinitions.Add(tttcol);
+                            goto case 4;
+                        case 7:
+                        case 8:
+                        case 9:
+                            RowDefinition tttrow = new RowDefinition();
+                            tttrow.Height = new GridLength(1, GridUnitType.Star);
+                            tsubgrid.RowDefinitions.Add(tttrow);
+                            goto case 6;
+                        default:
+                            return;
+                    }
+                    int columns = tsubgrid.ColumnDefinitions.Count();
+                    for (int j = 0; j < tplayersatthistile.Count(); j++) { 
+                        Ellipse playertoken = new Ellipse();
+                        playertoken.Fill = System.Windows.Media.Brushes.Black;
+                        playertoken.Stretch = System.Windows.Media.Stretch.Uniform;
+                        //playertoken.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+                        //playertoken.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+                        Grid.SetColumn(playertoken, j % columns);
+                        Grid.SetRow(playertoken, j / columns);
+                        tsubgrid.Children.Add(playertoken);
+                    }
+                }
+                System.Diagnostics.Debug.WriteLine(((Grid)FindName(ttilename)).Children.Count);
+                ((Grid)FindName(ttilename)).Children.Add(tsubgrid);
+                System.Diagnostics.Debug.WriteLine(((Grid)FindName(ttilename)).Children.Count);
+            }
+        }
     }
 
     public class DiceDisplay { 
@@ -332,6 +421,50 @@ namespace Monopoly
         
     }
 
+    public class Playerdisplay { 
+    
+        List <int> playerpositions;
+
+        List <int> [] playersatposition;
+
+        public Playerdisplay(int noplayers) { 
+            playerpositions = new List <int> ();
+            playersatposition = new List <int> [41];
+            for (int i = 0; i < 41; i++) {
+                playersatposition[i] = new List<int>();
+            }
+            for (int i = 0; i < noplayers; i++) {
+                playerpositions.Add(0);
+                playersatposition[0].Add(i);
+            }
+        }
+
+        public int getPlayerPosition(int no) { 
+            if (no >= 0 && no < playerpositions.Count()) { 
+                return playerpositions[no];
+            } else { 
+                return -1;
+            }
+
+        }
+
+        public List <int> getPlayersAtPosition(int pos) { 
+            if (pos >= 0 && pos < 41) {
+                return playersatposition[pos];
+            } else { 
+                return new List <int> ();
+            }
+        }
+
+
+        public void refresh() { 
+            string ttilename;
+            for (int i = 0; i < 41; i++) { 
+                ttilename = "Tile" + i.ToString();
+                
+            }
+        }
+    }
 
 
 }
