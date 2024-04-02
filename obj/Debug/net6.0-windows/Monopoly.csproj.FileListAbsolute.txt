@@ -26,3 +26,5 @@ C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\Monopoly.Properties
 C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\Monopoly.csproj.GenerateResource.cache
 C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\playertokens.g.cs
 C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\playertokens.baml
+C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\SettingsWindow.g.cs
+C:\Users\ed\Desktop\Csharp\Monopoly\obj\Debug\net6.0-windows\SettingsWindow.baml

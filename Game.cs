@@ -47,5 +47,9 @@ namespace Monopoly
         public int getDice(int diceno) { 
             return dice.read(diceno);
         }
+
+        public int getTurn() { 
+            return turn;
+        }
     }
 }

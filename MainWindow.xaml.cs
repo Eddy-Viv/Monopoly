@@ -24,11 +24,16 @@ namespace Monopoly
         DiceDisplay dicedisplay;
         Playerdisplay playerdisplay;
 
+        SettingsWindow settingswindow;
+
         public MainWindow()
         {
+            InitializeComponent();
+            settingswindow = new SettingsWindow();
+            settingswindow.Show();
+
             dicedisplay = new DiceDisplay();
             playerdisplay = new Playerdisplay(5);
-            InitializeComponent();
             updateDice();
         }
 
@@ -230,37 +235,40 @@ namespace Monopoly
         }
 
         public void refreshPlayerDisplay() {
-            string ttilename;
-
-            List <int> tplayersatthistile;
-
-            
-            
-
+      
             for (int i = 0; i < 41; i++)
             {
-                tplayersatthistile = playerdisplay.getPlayersAtPosition(i);
+                refreshTile(i);
+            }
+        }
 
-                ttilename = "Tile" + i.ToString();
+        void refreshTile(int tileno) {
+            if (tileno >= 0 && tileno < 41)
+            {
 
-                for (int j = 0; j < ((Grid)FindName(ttilename)).Children.Count; j++) { 
-                    if (((Grid)FindName(ttilename)).Children[j].Uid == ttilename + "G") {
-                        ((Grid)FindName(ttilename)).Children.RemoveAt(j);
+                string ttilename;
+
+                List<int> tplayersatthistile;
+
+                tplayersatthistile = playerdisplay.getPlayersAtPosition(tileno);
+
+                ttilename = "Tile" + tileno.ToString();
+                Grid ttile = (Grid)FindName(ttilename);
+
+                for (int j = 0; j < ((Grid)FindName(ttilename)).Children.Count; j++)
+                {
+                    if (ttile.Children[j].Uid == ttilename + "G")
+                    {
+                        ttile.Children.RemoveAt(j);
                     }
                 }
-                
-               // if (FindName(ttilename + "G"). != null) { 
-                //        System.Diagnostics.Debug.WriteLine(FindName(ttilename + "G"));
-                 //   ((Grid)FindName(ttilename)).Children.Remove((Grid)FindName(ttilename + "G"));
-                    
-
-                //}
-
 
                 Grid tsubgrid = new Grid();
                 tsubgrid.Uid = ttilename + "G";
-                if (tplayersatthistile.Count() > 0) { 
-                    switch (tplayersatthistile.Count()) { 
+                if (tplayersatthistile.Count() > 0)
+                {
+                    switch (tplayersatthistile.Count())
+                    {
                         case 0:
                             break;
                         case 1:
@@ -299,21 +307,29 @@ namespace Monopoly
                             return;
                     }
                     int columns = tsubgrid.ColumnDefinitions.Count();
-                    for (int j = 0; j < tplayersatthistile.Count(); j++) { 
+                    for (int j = 0; j < tplayersatthistile.Count(); j++)
+                    {
                         Ellipse playertoken = new Ellipse();
                         playertoken.Fill = System.Windows.Media.Brushes.Black;
                         playertoken.Stretch = System.Windows.Media.Stretch.Uniform;
-                        //playertoken.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
-                        //playertoken.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+                        playertoken.MinWidth = 30;
+                        playertoken.MinHeight = 30;
+                        playertoken.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+                        playertoken.VerticalAlignment = System.Windows.VerticalAlignment.Center;
                         Grid.SetColumn(playertoken, j % columns);
                         Grid.SetRow(playertoken, j / columns);
                         tsubgrid.Children.Add(playertoken);
                     }
                 }
-                System.Diagnostics.Debug.WriteLine(((Grid)FindName(ttilename)).Children.Count);
-                ((Grid)FindName(ttilename)).Children.Add(tsubgrid);
-                System.Diagnostics.Debug.WriteLine(((Grid)FindName(ttilename)).Children.Count);
+                ttile.Children.Add(tsubgrid);
             }
+        }
+
+        public void movePlayer(int playerno, int dest) { 
+            int currentplayerpos = playerdisplay.getPlayerPosition(playerno);
+            playerdisplay.movePlayer(playerno, dest);
+            refreshTile(currentplayerpos);
+            refreshTile(dest);
         }
     }
 
@@ -423,11 +439,14 @@ namespace Monopoly
 
     public class Playerdisplay { 
     
+        int totalplayers;
+
         List <int> playerpositions;
 
         List <int> [] playersatposition;
 
         public Playerdisplay(int noplayers) { 
+            totalplayers = noplayers;
             playerpositions = new List <int> ();
             playersatposition = new List <int> [41];
             for (int i = 0; i < 41; i++) {
@@ -456,14 +475,14 @@ namespace Monopoly
             }
         }
 
-
-        public void refresh() { 
-            string ttilename;
-            for (int i = 0; i < 41; i++) { 
-                ttilename = "Tile" + i.ToString();
-                
+        public void movePlayer(int playerno, int dest) {
+            if (playerno >= 0 && playerno < totalplayers && dest >= 0 && dest < 41) {
+                playersatposition[playerpositions[playerno]].Remove(playerno);
+                playerpositions[playerno] = dest;
+                playersatposition[dest].Add(playerno);
             }
         }
+
     }
 
 

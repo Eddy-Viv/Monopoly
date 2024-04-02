@@ -17,6 +17,7 @@ namespace Monopoly
         Game game;
 
         App() { 
+
             game = new Game(4);
         }
 
@@ -32,6 +33,10 @@ namespace Monopoly
 
         public int getDice(int diceno) { 
             return game.getDice(diceno);
+        }
+
+        public int getTurn() { 
+            return game.getTurn();
         }
     }
 }
