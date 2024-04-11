@@ -71,7 +71,7 @@ namespace Monopoly
             tplayerdelete.Click += new RoutedEventHandler(deletePlayer);
             playergrid.Children.Add(tplayerdelete);
 
-            if(playergrid.Children.Count > 32) { 
+            if(playergrid.Children.Count > 48) { 
                 addbutton.IsEnabled = false;
             }
         }
@@ -92,18 +92,53 @@ namespace Monopoly
             addbutton.IsEnabled = true;
         }
 
-        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        private void finishButton(object sender, RoutedEventArgs e)
         {
+            int noplayers = 0;
+            for (int i = playergrid.Children.Count - 1; i >= 0 ; i--) { 
+                if (Grid.GetRow(playergrid.Children[i]) >= noplayers) { 
+                    if (Grid.GetColumn(playergrid.Children[i]) == 2) { 
+                        if (playergrid.Children[i].GetType() == (new ComboBox()).GetType()) { 
+                            noplayers = Grid.GetRow(playergrid.Children[i]) + 1;
+                        }
+                    }
+                }
+            }
 
+            for (int i = 0; i < noplayers; i++) { 
+                players.Add(new SettingsPlayer());
+            }
+
+            foreach (UIElement i in playergrid.Children) { 
+                if (Grid.GetRow(i) < noplayers)
+                {
+                    switch (Grid.GetColumn(i)) { 
+                        case 1:
+                            players[Grid.GetRow(i)].name = ((TextBox)i).Text;
+                            break;
+                        case 2:
+                            if (((ComboBox)i).Text == "Player")
+                            {
+                                players[Grid.GetRow(i)].ishuman = true;
+                            } else {
+                                players[Grid.GetRow(i)].ishuman = false;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+
+                }
+            }
+            this.Close();
         }
 
-        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-
+        public List<SettingsPlayer> getPlayers() { 
+            return players;
         }
     }
 
-    public struct SettingsPlayer { 
+    public class SettingsPlayer { 
         public string name;
         public bool ishuman;
     }

@@ -24,7 +24,6 @@ namespace Monopoly
 
         private void ApplicationStartup(object sender, StartupEventArgs e) { 
             MainWindow wnd = new MainWindow();
-            wnd.Show();
         }
 
         public void rollDice() { 

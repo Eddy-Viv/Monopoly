@@ -21,6 +21,8 @@ namespace Monopoly
     public partial class MainWindow : Window
     {
 
+        readonly Random rnd;
+
         DiceDisplay dicedisplay;
         Playerdisplay playerdisplay;
 
@@ -28,16 +30,34 @@ namespace Monopoly
 
         public MainWindow()
         {
+            //System.Diagnostics.Debug.WriteLine("hello i am in the debug console");
+
             InitializeComponent();
+            rnd = new Random();
             settingswindow = new SettingsWindow();
+            settingswindow.Closing += Settingswindow_Closing;
             settingswindow.Show();
 
             dicedisplay = new DiceDisplay();
-            playerdisplay = new Playerdisplay(5);
+            playerdisplay = new Playerdisplay();
             updateDice();
+
+
         }
 
+        private void Settingswindow_Closing(object? sender, System.ComponentModel.CancelEventArgs e)
+        {
+            List <SettingsPlayer> tlist = settingswindow.getPlayers();
 
+            playerdisplay = new Playerdisplay(tlist.Count);
+
+            for (int i = 0; i < tlist.Count; i++) { 
+                playerdisplay.setPlayer(i, tlist[i].name, tlist[i].ishuman);
+            }
+            
+            this.Show();
+            refreshTile(0);
+        }
 
         void Dice_Click(object sender, MouseButtonEventArgs e)
         {
@@ -255,11 +275,11 @@ namespace Monopoly
                 ttilename = "Tile" + tileno.ToString();
                 Grid ttile = (Grid)FindName(ttilename);
 
-                for (int j = 0; j < ((Grid)FindName(ttilename)).Children.Count; j++)
+                for (int i = 0; i < ((Grid)FindName(ttilename)).Children.Count; i++)
                 {
-                    if (ttile.Children[j].Uid == ttilename + "G")
+                    if (ttile.Children[i].Uid == ttilename + "G")
                     {
-                        ttile.Children.RemoveAt(j);
+                        ttile.Children.RemoveAt(i);
                     }
                 }
 
@@ -267,50 +287,27 @@ namespace Monopoly
                 tsubgrid.Uid = ttilename + "G";
                 if (tplayersatthistile.Count() > 0)
                 {
-                    switch (tplayersatthistile.Count())
-                    {
-                        case 0:
-                            break;
-                        case 1:
-                            RowDefinition trow = new RowDefinition();
-                            trow.Height = new GridLength(1, GridUnitType.Star);
-                            tsubgrid.RowDefinitions.Add(trow);
-                            ColumnDefinition tcol = new ColumnDefinition();
-                            tcol.Width = new GridLength(1, GridUnitType.Star);
-                            tsubgrid.ColumnDefinitions.Add(tcol);
-                            break;
-                        case 2:
-                            ColumnDefinition ttcol = new ColumnDefinition();
-                            ttcol.Width = new GridLength(1, GridUnitType.Star);
-                            tsubgrid.ColumnDefinitions.Add(ttcol);
-                            goto case 1;
-                        case 3:
-                        case 4:
-                            RowDefinition ttrow = new RowDefinition();
-                            ttrow.Height = new GridLength(1, GridUnitType.Star);
-                            tsubgrid.RowDefinitions.Add(ttrow);
-                            goto case 2;
-                        case 5:
-                        case 6:
-                            ColumnDefinition tttcol = new ColumnDefinition();
-                            tttcol.Width = new GridLength(1, GridUnitType.Star);
-                            tsubgrid.ColumnDefinitions.Add(tttcol);
-                            goto case 4;
-                        case 7:
-                        case 8:
-                        case 9:
-                            RowDefinition tttrow = new RowDefinition();
-                            tttrow.Height = new GridLength(1, GridUnitType.Star);
-                            tsubgrid.RowDefinitions.Add(tttrow);
-                            goto case 6;
-                        default:
-                            return;
+                    int rows = (int)Math.Ceiling(Math.Sqrt((double)tplayersatthistile.Count()));
+                    int cols = (int)Math.Ceiling((double)tplayersatthistile.Count() / rows);
+
+                    for (int i = 0; i < rows; i++) { 
+                        RowDefinition trow = new RowDefinition();
+                        trow.Height = new GridLength(1, GridUnitType.Star);
+                        tsubgrid.RowDefinitions.Add(trow);
                     }
+
+                    for (int i = 0; i < cols; i++)
+                    {
+                        ColumnDefinition tcol = new ColumnDefinition();
+                        tcol.Width = new GridLength(1, GridUnitType.Star);
+                        tsubgrid.ColumnDefinitions.Add(tcol);
+                    }
+
                     int columns = tsubgrid.ColumnDefinitions.Count();
                     for (int j = 0; j < tplayersatthistile.Count(); j++)
                     {
                         Ellipse playertoken = new Ellipse();
-                        playertoken.Fill = System.Windows.Media.Brushes.Black;
+                        playertoken.Fill = playerdisplay.getPlayerColour(tplayersatthistile[j]);
                         playertoken.Stretch = System.Windows.Media.Stretch.Uniform;
                         playertoken.MinWidth = 30;
                         playertoken.MinHeight = 30;
@@ -441,18 +438,58 @@ namespace Monopoly
     
         int totalplayers;
 
+        List<string> playernames;
+
+        List<bool> playerishuman;
+
+        List <System.Windows.Media.SolidColorBrush> playercolours;
+
         List <int> playerpositions;
 
         List <int> [] playersatposition;
 
-        public Playerdisplay(int noplayers) { 
+        readonly Random rnd;
+
+        public Playerdisplay() { 
+            totalplayers = 0;
+        }
+        
+        public Playerdisplay(int noplayers) {
+            rnd = new Random();
+
             totalplayers = noplayers;
+
+            playernames = new List<string>();
+            playerishuman = new List<bool>();
+
+            playercolours = new List<System.Windows.Media.SolidColorBrush>() { 
+                System.Windows.Media.Brushes.Blue,
+                System.Windows.Media.Brushes.Red,
+                System.Windows.Media.Brushes.Green,
+                System.Windows.Media.Brushes.Yellow,
+                System.Windows.Media.Brushes.Teal,
+                System.Windows.Media.Brushes.Purple,
+                System.Windows.Media.Brushes.Gray,
+                System.Windows.Media.Brushes.Orange
+            };
+            for (int i = 8; i < noplayers; i++) {
+                
+                byte R = (byte)rnd.Next();
+                byte G = (byte)rnd.Next();
+                byte B = (byte)rnd.Next();
+                playercolours.Add(new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(R,G,B)));
+            }
+
+
+
             playerpositions = new List <int> ();
             playersatposition = new List <int> [41];
             for (int i = 0; i < 41; i++) {
                 playersatposition[i] = new List<int>();
             }
             for (int i = 0; i < noplayers; i++) {
+                playernames.Add("");
+                playerishuman.Add(false);
                 playerpositions.Add(0);
                 playersatposition[0].Add(i);
             }
@@ -475,11 +512,28 @@ namespace Monopoly
             }
         }
 
+        public System.Windows.Media.SolidColorBrush getPlayerColour(int playerno) {
+            if (playerno >= 0 && playerno < totalplayers) { 
+                return playercolours[playerno];
+            } else { 
+                return System.Windows.Media.Brushes.Black;
+            }
+        }
+
         public void movePlayer(int playerno, int dest) {
             if (playerno >= 0 && playerno < totalplayers && dest >= 0 && dest < 41) {
                 playersatposition[playerpositions[playerno]].Remove(playerno);
                 playerpositions[playerno] = dest;
                 playersatposition[dest].Add(playerno);
+            }
+        }
+
+        public void setPlayer(int playerno, string name, bool ishuman) {
+            if (playerno >= 0 && playerno < totalplayers)
+            {
+                playernames[playerno] = name;
+                playerishuman[playerno] = ishuman;
+
             }
         }
 
